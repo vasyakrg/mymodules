@@ -2,7 +2,7 @@
 Modules for Terraform and Ansible
 
 ## Terraform
-### Vscale.io
+### [Vscale.io](https://github.com/vasyakrg/mymodules/tree/master/Terraform/Vscale.io)
 ```
 .
 └── Terraform
@@ -12,7 +12,7 @@ Modules for Terraform and Ansible
         └── example
 ```
 
-### AWS
+### [AWS](https://github.com/vasyakrg/mymodules/tree/master/Terraform/AWS)
 ```
 .
 └── Terraform
