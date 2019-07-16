@@ -1,6 +1,6 @@
-# Vscale deploy scalet-domain module
+# AWS deploy domain module
 
-### модуль для создания домена и привязки к нему записей в сервисе [AWS](aws.amazon.com)
+### модуль для создания домена и привязки к нему записей в сервисе [AWS](https://aws.amazon.com)
 
 ##### Переменные:
   - dns_zone_name (!)

@@ -9,6 +9,17 @@ Modules for Terraform and Ansible
     └── Vscale.io
         └── vscale-instance
         └── vscale-domain
+        └── example
+```
+
+### AWS
+```
+.
+└── Terraform
+    └── AWS
+        └── aws-domain
+        └── aws-instance
+        └── example
 ```
 
 ##### Автор

@@ -1,6 +1,6 @@
 # AWS deploy instance module
 
-### модуль для создания ВМ в сервисе [AWS](aws.amazon.com)
+### модуль для создания ВМ в сервисе [AWS](https://aws.amazon.com)
 
 ##### Переменные:
   - ami
