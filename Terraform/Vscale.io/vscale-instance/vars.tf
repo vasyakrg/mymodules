@@ -1,7 +1,3 @@
-variable "scalet_token" {
-  default = ""
-}
-
 variable "scalet_name" {
   default = ""
 }
