@@ -1,6 +1,6 @@
 resource "vscale_ssh_key" "key" {
   name = "${var.scalet_ssh_key_name}"
-  key  = "${var.scalet_ssh_key_path}"
+  key  = "${file("${var.scalet_ssh_key_path}")}"
 }
 
 resource "vscale_scalet" "scalet_instance" {
