@@ -2,10 +2,10 @@
 ### модуль для создания ВМ в сервисе [vscale.io](https://vscale.io)
 ##### Переменные:
   - scalet_name (!)
-    > имя создаваемой ВМ, default = null
+    > имя создаваемой ВМ, default = **null**
 
   - scalet_token (!)
-    > token from vscale.io, default = null
+    > token from vscale.io, default = **null**
 
   - scalet_location
     > размещение сервера, default = spb0
@@ -32,7 +32,7 @@
 
 #### Outputs
   - scalet_ip-address
-    > ip адрес полученной ВМ
+  - scalet_name
 
 #### Пример использования
   ```
@@ -43,7 +43,6 @@
   scalet_image_index  = "0"
   scalet_default_user = "root"
 }
-
   ```
 
 ##### Автор
