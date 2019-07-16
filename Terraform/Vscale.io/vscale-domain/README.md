@@ -1,5 +1,7 @@
 # Vscale deploy scalet-domain module
+
 ### модуль для создания домена и привязки к нему записей в сервисе [vscale.io](https://vscale.io)
+
 ##### Переменные:
   - domain_name (!)
     > имя создаваемого домена, default = **null**
