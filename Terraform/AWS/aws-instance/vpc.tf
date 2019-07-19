@@ -7,7 +7,7 @@ resource "aws_security_group_rule" "egress" {
   from_port         = 0
   to_port           = 0
   protocol          = "-1"
-  cidr_blocks       = ["0.0.0.0/0"]
+  cidr_blocks       = ["${var.cidr_block}"]
   description       = "All egress traffic"
   security_group_id = "${aws_security_group.default.id}"
 }
@@ -19,6 +19,7 @@ resource "aws_security_group_rule" "tcp" {
   to_port           = "${var.allow_tcp_ports[count.index]}"
   protocol          = "tcp"
   description       = ""
+  cidr_blocks       = ["${var.cidr_block}"]
   security_group_id = "${aws_security_group.default.id}"
 }
 
@@ -29,5 +30,6 @@ resource "aws_security_group_rule" "udp" {
   to_port           = "${var.allow_udp_ports[count.index]}"
   protocol          = "udp"
   description       = ""
+  cidr_blocks       = ["${var.cidr_block}"]
   security_group_id = "${aws_security_group.default.id}"
 }
