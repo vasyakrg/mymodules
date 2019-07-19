@@ -18,6 +18,12 @@
   - ssh_key_name (!)
     > имя ключа из личного раздела KeyPairs в AWS, default = **null**
 
+  - allow_tcp_ports
+    > порты tcp, открываемые для внешнего доступа, default = ["22"]
+
+  - allow_udp_ports
+    > порты udp, открываемые для внешнего доступа, default = []
+
   - tags
     > теги для создаваемой машины, default = **null**
 

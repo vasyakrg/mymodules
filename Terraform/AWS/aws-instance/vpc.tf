@@ -1,20 +1,33 @@
-resource "aws_security_group" "allow_ssh" {
-  name = "allow-ssh"
+resource "aws_security_group" "default" {
+  name = "allow-ports"
+}
 
-  ingress {
-    cidr_blocks = [
-      "0.0.0.0/0",
-    ]
+resource "aws_security_group_rule" "egress" {
+  type              = "egress"
+  from_port         = 0
+  to_port           = 0
+  protocol          = "-1"
+  cidr_blocks       = ["0.0.0.0/0"]
+  description       = "All egress traffic"
+  security_group_id = "${aws_security_group.default.id}"
+}
 
-    from_port = 22
-    to_port   = 22
-    protocol  = "tcp"
-  }
+resource "aws_security_group_rule" "tcp" {
+  count             = "${length(var.allow_tcp_ports)}"
+  type              = "ingress"
+  from_port         = "${var.allow_tcp_ports[count.index]}"
+  to_port           = "${var.allow_tcp_ports[count.index]}"
+  protocol          = "tcp"
+  description       = ""
+  security_group_id = "${aws_security_group.default.id}"
+}
 
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+resource "aws_security_group_rule" "udp" {
+  count             = "${length(var.allow_udp_ports)}"
+  type              = "ingress"
+  from_port         = "${var.allow_udp_ports[count.index]}"
+  to_port           = "${var.allow_udp_ports[count.index]}"
+  protocol          = "udp"
+  description       = ""
+  security_group_id = "${aws_security_group.default.id}"
 }

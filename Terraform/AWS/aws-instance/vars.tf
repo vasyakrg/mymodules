@@ -22,3 +22,17 @@ variable "tags" {
   type    = "map"
   default = null
 }
+
+variable "cidr_block" {
+  default = "0.0.0.0/0"
+}
+
+variable "allow_tcp_ports" {
+  type    = "list"
+  default = ["22"]
+}
+
+variable "allow_udp_ports" {
+  type    = "list"
+  default = []
+}
